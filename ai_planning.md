@@ -33,10 +33,4 @@ If you build this correctly, we can maintain ~30 FPS on a standard multi-core CP
 * **Recognition (CUDA):** Should take < 10ms.
 * **Our Optimization Goal:** The architecture must natively pass tensors to the `cuda` device if `torch.cuda.is_available()` is True. If run on an RTX card or T4 cloud VM, we should easily exceed 60+ FPS processing speed.
 
----
-Let's build this! Use modern, clean, modular Python architecture (classes for Database, Tracking, UI, etc.).
-
-## 🎥 Demo Video
-[Insert Loom or YouTube video link demonstrating the solution here]
-
 *This project is a part of a hackathon run by https://katomaran.com*
