@@ -1,0 +1,29 @@
+# Core dependencies
+opencv-python==4.9.0.80
+numpy==1.26.4
+torch==2.2.2
+torchvision==0.17.2
+
+# YOLO
+ultralytics==8.1.0
+
+# Face recognition
+insightface==0.7.3
+onnxruntime==1.17.1
+# onnxruntime-gpu==1.17.1  # optional (only if GPU setup correct)
+
+# Database
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+
+# Utilities
+python-dateutil==2.8.2
+Pillow==10.2.0
+scipy==1.11.4
+
+# Tracking
+scikit-learn==1.4.0
+filterpy==1.4.5
+
+# Logging
+colorlog==6.8.0

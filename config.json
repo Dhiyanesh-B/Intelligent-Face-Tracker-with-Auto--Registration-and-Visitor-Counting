@@ -1,0 +1,56 @@
+{
+  "video_source": {
+    "type": "file",
+    "path": "sample_video2.mp4",
+    "rtsp_url": "rtsp://your_camera_stream"
+  },
+  "person_detection": {
+    "model": "yolo26n.pt",
+    "confidence_threshold": 0.4,
+    "iou_threshold": 0.45,
+    "max_detections_per_frame": 20,
+    "frames_to_skip": 10
+  },
+  "recognition": {
+    "model": "buffalo_l",
+    "embedding_size": 512,
+    "similarity_threshold": 0.38,
+    "use_gpu": true,
+    "det_size": [
+      320,
+      320
+    ]
+  },
+  "tracking": {
+    "max_age": 60,
+    "min_hits": 2,
+    "iou_threshold": 0.3,
+    "min_active_frames": 8,
+    "edge_zone_ratio": 0.15
+  },
+  "database": {
+    "type": "postgresql",
+    "path": "database/face_tracker.db",
+    "postgresql": {
+      "host": "localhost",
+      "port": 5432,
+      "database": "face_tracker",
+      "user": "postgres",
+      "password": "admin"
+    }
+  },
+  "logging": {
+    "log_file": "logs/events.log",
+    "image_storage": "logs/entries",
+    "log_level": "INFO",
+    "max_log_size_mb": 100,
+    "backup_count": 5
+  },
+  "system": {
+    "process_every_n_frames": 2,
+    "process_max_dim": 640,
+    "display_output": true,
+    "save_video_output": false,
+    "output_video_path": "output/tracked_video.mp4"
+  }
+}

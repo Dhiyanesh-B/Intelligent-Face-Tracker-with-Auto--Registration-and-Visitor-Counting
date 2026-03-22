@@ -1,0 +1,26 @@
+face-tracker-system/
+├── config.json
+├── requirements.txt
+├── README.md
+├── main.py
+├── modules/
+│   ├── __init__.py
+│   ├── face_detector.py
+│   ├── face_recognizer.py
+│   ├── face_tracker.py
+│   ├── database_manager.py
+│   ├── logger_system.py
+│   └── visitor_counter.py
+├── utils/
+│   ├── __init__.py
+│   ├── config_loader.py
+│   └── image_utils.py
+├── database/
+│   └── init_db.sql
+├── logs/
+│   ├── events.log
+│   └── entries/
+├── models/
+│   └── (downloaded models will be stored here)
+└── tests/
+    └── test_system.py
