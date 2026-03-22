@@ -17,7 +17,7 @@ Here is the strict feature list I expect you to build into the app:
 * **Auto-Registration Protocol**: If a generated embedding doesn't match our Postgres database (using cosine similarity < 0.38), register them as a new user dynamically and store their embedding in a `BYTEA` column.
 * **Event Logging & Snapshotting**: Whenever someone enters or leaves the frame, save an annotated crop of their face AND their body to the local filesystem (e.g. `logs/entries/...`).
 * **Unique Dwell & Visitor Counting**: Deduplicate the flow. If someone walks in and stands there for 5 minutes, that counts as 1 entry, 1 dwell time log, and 1 exit.
-* **Turbo Mode Optimization**: Create an 'Adaptive Cooldown' mechanism. I don't want you running InsightFace 30 times a second on the same person.
+* **Optimization**: Create an 'Adaptive Cooldown' mechanism. I don't want you running InsightFace 30 times a second on the same person.
 
 ## 3. Estimate the amount of compute load consumption in both CPU and GPU
 Before we write the code, here is my computation estimate that we need to design around:
@@ -25,7 +25,7 @@ Before we write the code, here is my computation estimate that we need to design
 ### CPU-Only Workload Constraint
 * **Detection (YOLOv26):** Will likely take ~30-50ms per frame.
 * **Recognition (InsightFace):** Very heavy, around 40-70ms per face.
-* **Our Optimization Goal:** Because of this load, you must implement a "Turbo Mode" where we process videos at exactly 640px width, skip every 2nd frame (`process_every_n_frames: 2`), and only run the YOLO detector every 10 tracked frames.
+* **Our Optimization Goal:** Because of this load, we process videos at exactly 640px width, skip every 2nd frame (`process_every_n_frames: 2`), and only run the YOLO detector every 10 tracked frames.
 If you build this correctly, we can maintain ~30 FPS on a standard multi-core CPU.
 
 ### GPU Workload Expectations
