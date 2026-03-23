@@ -103,7 +103,8 @@ Through the **Adaptive Cooldown Mechanism**, the recognition engine tests close 
 
 ## 🎥 Explanation Video
 
-[![Watch explanation](https://via.placeholder.com/800x400.png?text=Click+to+Watch+Demo)](./explanation.mp4)
+👉 Click to watch full video 
+[Watch explanation](./explanation.mp4)
 
 ## License
 MIT License.
