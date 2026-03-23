@@ -99,10 +99,11 @@ Logged automatically to `/logs/entries/YYYY-MM-DD/`. Both `_body_` and `_face_` 
 6. **Tracking**: Subjects move continuously between frames (smooth motion).
 
 ## ⚡ Performance Breakdown
-Through the **Adaptive Cooldown Mechanism**, the recognition engine tests close targets (occupying >35% vertical height) every 5 frames, but distant targets (<15%) every 40 frames. With `Turbo Mode` optimizations enabled, the pipeline scales efficiently on multi-core CPUs (~30FPS) and screams on modern GPUs (>60FPS).
+Through the **Adaptive Cooldown Mechanism**, the recognition engine tests close targets (occupying >35% vertical height) every 5 frames, but distant targets (<15%) every 40 frames. The pipeline scales efficiently on multi-core CPUs (~30FPS) and screams on modern GPUs (>60FPS).
 
-## 🎥 Demo Video
-[Insert Loom or YouTube video link demonstrating the solution here]
+## 🎥 Explanation Video
+
+[![Watch explanation](https://via.placeholder.com/800x400.png?text=Click+to+Watch+Demo)](./explanation.mp4)
 
 ## License
 MIT License.
